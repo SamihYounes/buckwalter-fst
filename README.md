@@ -21,14 +21,19 @@ This reads words from stdin and prints parses to stdout. This method gives the f
 echo "ktb" | flookup buckwalter-num.foma
 Which should produce an output of 9 possible parses like:
 
-PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[katab] STEMCLASS:[PV] STEMGLOSS:[write] SUFFIXUV:[] SUFFIXV:[a] SUFFIXCLASS:[PVSuff-a] SUFFIXGLOSS:[he/it <verb> <pos>+a/PVSUFF_SUBJ:3MS</pos>] 
-PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[] SUFFIXCLASS:[Suff-0] SUFFIXGLOSS:[] 
-PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[i] SUFFIXCLASS:[NSuff-i] SUFFIXGLOSS:[[def.gen.] <pos>+i/CASE_DEF_GEN</pos>] 
-PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[u] SUFFIXCLASS:[NSuff-u] SUFFIXGLOSS:[[def.nom.] <pos>+u/CASE_DEF_NOM</pos>] 
-PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[N] SUFFIXCLASS:[NSuff-N] SUFFIXGLOSS:[[indef.nom.] <pos>+N/CASE_INDEF_NOM</pos>] 
-PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[a] SUFFIXCLASS:[NSuff-a] SUFFIXGLOSS:[[def.acc.] <pos>+a/CASE_DEF_ACC</pos>] 
-PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[K] SUFFIXCLASS:[NSuff-K] SUFFIXGLOSS:[[indef.gen.] <pos>+K/CASE_INDEF_GEN</pos>] 
-PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutib] STEMCLASS:[PV_Pass] STEMGLOSS:[be written;be fated;be destined] SUFFIXUV:[] SUFFIXV:[a] SUFFIXCLASS:[PVSuff-a] SUFFIXGLOSS:[he/it <verb> <pos>+a/PVSUFF_SUBJ:3MS</pos>]
+#PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[katab] STEMCLASS:[PV] STEMGLOSS:[write] SUFFIXUV:[] SUFFIXV:[a] SUFFIXCLASS:[PVSuff-a] SUFFIXGLOSS:[he/it <verb> <pos>+a/PVSUFF_SUBJ:3MS</pos>] 
+
+#PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[] SUFFIXCLASS:[Suff-0] SUFFIXGLOSS:[] 
+
+#PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[i] SUFFIXCLASS:[NSuff-i] SUFFIXGLOSS:[[def.gen.] <pos>+i/CASE_DEF_GEN</pos>] 
+#PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[u] SUFFIXCLASS:[NSuff-u] SUFFIXGLOSS:[[def.nom.] <pos>+u/CASE_DEF_NOM</pos>] 
+#PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[N] SUFFIXCLASS:[NSuff-N] SUFFIXGLOSS:[[indef.nom.] <pos>+N/CASE_INDEF_NOM</pos>] 
+
+#PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[a] SUFFIXCLASS:[NSuff-a] SUFFIXGLOSS:[[def.acc.] <pos>+a/CASE_DEF_ACC</pos>] 
+#PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutub] STEMCLASS:[N] STEMGLOSS:[books] SUFFIXUV:[] SUFFIXV:[K] SUFFIXCLASS:[NSuff-K] SUFFIXGLOSS:[[indef.gen.] <pos>+K/CASE_INDEF_GEN</pos>] 
+
+#PREFIXUV:[] PREFIXV:[] PREFIXCLASS:[Pref-0] PREFIXGLOSS:[] STEMUV:[ktb] STEMV:[kutib] STEMCLASS:[PV_Pass] STEMGLOSS:[be written;be fated;be destined] SUFFIXUV:[] SUFFIXV:[a] SUFFIXCLASS:[PVSuff-a] SUFFIXGLOSS:[he/it <verb> <pos>+a/PVSUFF_SUBJ:3MS</pos>]
+
 Here, both the unvocalized and vocalized prefixes, stems, and suffixes are listed for each entry, together with class and gloss information.
 
 Implementation details

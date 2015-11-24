@@ -1,0 +1,30 @@
+###########################################
+# Buckwalter to FST compilation with foma #
+###########################################
+
+# author: Mans Hulden & Younes Samih
+# date: 23.04.2012
+# license: GPL 2
+
+The scripts in this directory convert Tim Buckwalter's original Arabic morphological analyzer to a finite-state representation, which can then be used for parsing.  The original Buckwalter files which are used for the build are in the directory "./original"
+ 
+The scripts require foma to compile. The flookup program is also needed to parse words.
+
+TO COMPILE
+
+In this directory run "make".  This requires that perl and foma are installed. This produces two transducers in foma format in the file buckwalter-num.foma.
+
+TO PARSE
+
+Run:
+
+   flookup buckwalter-num.foma
+
+This reads from stdin and prints to stdout. This method gives the full parse (classes and glosses).  If you only want to parse a single word, you can, for example, do:
+
+   echo "ktb" | flookup buckwalter-num.foma
+
+If you are only interested in knowing the line numbers of the decomposed entries from the original Buckwalter files, run flookup with the -a flag:
+
+   flookup -a buckwalter-num.foma
+

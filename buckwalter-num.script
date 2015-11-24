@@ -1,0 +1,29 @@
+read lexc buckwalter-num.lexc
+define Lexicon;
+
+# We define the Grammar
+source buckwalter-constraints.script
+
+# We remove class tags
+source buckwalter-classes.script
+define Grammar [0 <- Classes .o. Lexicon];
+#define Grammar Lexicon;
+
+define RemoveShortVowels [a|u|i|o|%~|%`] (->) 0;
+
+#define NormalizeAlef [ "|" | "<" | ">" ] (->) A || .#. _ .o. "{" (->) [A|"<"] || .#. _ ;
+define NormalizeAlef [ "|" | "<" | ">" ] (->) A .o. "{" (->) [A|"<"] ;
+define RemovefatHatAn [F|K|N] -> 0;
+
+regex 0 <- %{|%} .o. Grammar .o. RemoveShortVowels .o. NormalizeAlef .o. RemovefatHatAn;
+
+define CleanGrammar;
+
+read lexc buckwalter-numtotext.lexc
+define NumToText;
+
+regex NumToText.i;
+regex CleanGrammar;
+
+save stack buckwalter-num.foma
+
